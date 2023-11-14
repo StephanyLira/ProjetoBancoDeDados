@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import dao.Conexao;
@@ -14,7 +9,6 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import model.Usuario;
 import view.FormCadastroView;
-
 /**
  *
  * @author steph
@@ -29,22 +23,20 @@ public class FormCadastroController {
     
     public void salvaUsuario(){
         
-        
         String email = view.getjTextFieldCadastrarEmail().getText();
         String senha = view.getjPasswordSenhaCadastrar().getText();
         String nome = view.getjTextFieldCadastrarNome().getText();
         String nomeSocial = view.getjTextFieldCadastrarNomeSocial().getText();
-        int DDD = Integer.parseInt(view.getjTextFieldCadastrarDDD().getText());
-        int celular = Integer.parseInt(view.getjTextFieldCadastarCelular().getText());
-        int dia = Integer.parseInt(view.getjComboBoxCadastrarDia().getSelectedItem().toString());
+        String DDD = view.getjTextFieldCadastrarDDD().getText();
+        String celular = view.getjTextFieldCadastarCelular().getText();
+        String dia = view.getjComboBoxCadastrarDia().getSelectedItem().toString();
         String mes = view.getjComboBoxCadastrarMes().getSelectedItem().toString();
-        int ano = Integer.parseInt(view.getjComboBoxCadastarAno().getSelectedItem().toString());
+        String ano = view.getjComboBoxCadastarAno().getSelectedItem().toString();
         String endereco = view.getjTextFieldCadastrarEndereco().getText();
-        int CEP = Integer.parseInt(view.getjTextFieldCadastarCEP().getText());
-        String estado = view.getjComboBoxCadastrarEstado().getToolTipText();
-        int numero = Integer.parseInt(view.getjTextFieldCadastarNumero().getText());
+        String CEP = view.getjTextFieldCadastarCEP().getText();        
+        String estado = view.getjComboBoxCadastrarEstado().getSelectedItem().toString();;
+        String numero = view.getjTextFieldCadastarNumero().getText();
         
-        //Usuario usuarioXandi = new Usuario("xandi", "123456");
        Usuario usuarioMC = new Usuario(email, senha, nome, nomeSocial, DDD, celular, dia, mes, ano, endereco, CEP, estado, numero);
         try {
             Connection conexao = new Conexao().getConnection();

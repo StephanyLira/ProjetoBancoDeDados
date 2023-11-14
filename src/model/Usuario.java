@@ -1,6 +1,4 @@
-
 package model;
-
 /**
  *
  * @author steph
@@ -11,22 +9,22 @@ public class Usuario {
     private String senha;
     private String nome;
     private String nomeSocial;
-    private int DDD;
-    private int celular;
-    private int dia;
+    private String DDD;
+    private String celular;
+    private String dia;
     private String mes;
-    private int ano;
+    private String ano;
     private String endereco;
-    private int CEP;
+    private String CEP;
     private String estado;
-    private int numero;
+    private String numero;
 
     public Usuario(String email, String senha) {
         this.email = email;
         this.senha = senha;
     }
 
-    public Usuario(int id, String email, String senha, String nome, String nomeSocial, int DDD, int celular, int dia, String mes, int ano, String endereco, int CEP, String estado, int numero) {
+    public Usuario(int id, String email, String senha, String nome, String nomeSocial, String DDD, String celular, String dia, String mes, String ano, String endereco, String CEP, String estado, String numero) {
         this.id = id;
         this.email = email;
         this.senha = senha;
@@ -42,9 +40,8 @@ public class Usuario {
         this.estado = estado;
         this.numero = numero;
     }
-    
-    
-    public Usuario(String email, String senha, String nome, String nomeSocial, int DDD, int celular, int dia, String mes, int ano, String endereco, int CEP, String estado, int numero) {
+
+    public Usuario(String email, String senha, String nome, String nomeSocial, String DDD, String celular, String dia, String mes, String ano, String endereco, String CEP, String estado, String numero) {
         this.email = email;
         this.senha = senha;
         this.nome = nome;
@@ -100,27 +97,27 @@ public class Usuario {
         this.nomeSocial = nomeSocial;
     }
 
-    public int getDDD() {
+    public String getDDD() {
         return DDD;
     }
 
-    public void setDDD(int DDD) {
+    public void setDDD(String DDD) {
         this.DDD = DDD;
     }
 
-    public int getCelular() {
+    public String getCelular() {
         return celular;
     }
 
-    public void setCelular(int celular) {
+    public void setCelular(String celular) {
         this.celular = celular;
     }
 
-    public int getDia() {
+    public String getDia() {
         return dia;
     }
 
-    public void setDia(int dia) {
+    public void setDia(String dia) {
         this.dia = dia;
     }
 
@@ -132,11 +129,11 @@ public class Usuario {
         this.mes = mes;
     }
 
-    public int getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
+    public void setAno(String ano) {
         this.ano = ano;
     }
 
@@ -148,11 +145,11 @@ public class Usuario {
         this.endereco = endereco;
     }
 
-    public int getCEP() {
+    public String getCEP() {
         return CEP;
     }
 
-    public void setCEP(int CEP) {
+    public void setCEP(String CEP) {
         this.CEP = CEP;
     }
 
@@ -164,18 +161,11 @@ public class Usuario {
         this.estado = estado;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
-    
-
-    
-    
-    
-    
-    
 }

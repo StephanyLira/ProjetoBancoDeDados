@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import model.Usuario;
 import view.LoginView;
-import view.MenuView;
+import view.CupomDeDesconto;
 
 /**
  *
@@ -37,7 +37,7 @@ public class LoginController {
         
         // se existir direcionar para o menu
         if(existe){
-           MenuView telaDeMenu = new MenuView();
+           CupomDeDesconto telaDeMenu = new CupomDeDesconto();
            telaDeMenu.setVisible(true); 
         }else{
             JOptionPane.showMessageDialog(view, "Usuário ou senha inválidos");
