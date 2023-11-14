@@ -51,7 +51,7 @@ public class LoginView extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(218, 41, 28));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("USUÁRIO");
+        jLabel1.setText("LOGIN");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 340, 450, 80));
 
         jTextFieldLoginEmail.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(218, 41, 28), 1, true));

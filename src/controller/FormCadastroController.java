@@ -22,7 +22,10 @@ public class FormCadastroController {
     }
     
     public void salvaUsuario(){
-        
+    
+    if ( !"".equals(view.getjTextFieldCadastarNumero().getText()) && (((((((((!"".equals(view.getjTextFieldCadastarCelular().getText()) && !"".equals(view.getjTextFieldCadastrarEmail().getText())) && !"".equals(view.getjPasswordSenhaCadastrar().getText())) && !"".equals(view.getjTextFieldCadastrarNome().getText())) && !"".equals(view.getjTextFieldCadastrarDDD().getText())) && !"<Selecione>".equals(view.getjComboBoxCadastrarDia().getSelectedItem().toString())) && !"<Selecione>".equals(view.getjComboBoxCadastrarMes().getSelectedItem().toString())) && !"<Selecione>".equals(view.getjComboBoxCadastarAno().getSelectedItem().toString())) && (!"".equals(view.getjTextFieldCadastrarEndereco().getText()) || "".equals(view.getjTextFieldCadastarCEP().getText()))) && !"<Selecione>".equals(view.getjComboBoxCadastrarEstado().getSelectedItem().toString())) )
+    {
+
         String email = view.getjTextFieldCadastrarEmail().getText();
         String senha = view.getjPasswordSenhaCadastrar().getText();
         String nome = view.getjTextFieldCadastrarNome().getText();
@@ -34,29 +37,31 @@ public class FormCadastroController {
         String ano = view.getjComboBoxCadastarAno().getSelectedItem().toString();
         String endereco = view.getjTextFieldCadastrarEndereco().getText();
         String CEP = view.getjTextFieldCadastarCEP().getText();        
-        String estado = view.getjComboBoxCadastrarEstado().getSelectedItem().toString();;
+        String estado = view.getjComboBoxCadastrarEstado().getSelectedItem().toString();
         String numero = view.getjTextFieldCadastarNumero().getText();
         
-       Usuario usuarioAutenticar = new Usuario(email);
-       Usuario usuarioMC = new Usuario(email, senha, nome, nomeSocial, DDD, celular, dia, mes, ano, endereco, CEP, estado, numero);
+        Usuario usuarioAutenticar = new Usuario(email);
+        Usuario usuarioMC = new Usuario(email, senha, nome, nomeSocial, DDD, celular, dia, mes, ano, endereco, CEP, estado, numero);
         try {
             //verificar se existe no banco de dados
         
             Connection conexao = new Conexao().getConnection();
             UsuarioDAO usuarioDao = new UsuarioDAO(conexao);
             boolean existe = usuarioDao.existeNoBancoPorEmail(usuarioAutenticar);
-        
-        // se existir mandar mensagem para usuario
-        if(existe){
-           JOptionPane.showMessageDialog(view, "Email já cadastrado, utilize outro email!");
-        }else{
-            usuarioDao.insert(usuarioMC);
-            JOptionPane.showMessageDialog(null, "Usuário salvo com sucesso!");
-                   }
+            
+            // se existir mandar mensagem para usuario
+            if(existe){
+                JOptionPane.showMessageDialog(view, "Email já cadastrado, utilize outro email!");
+            }else{
+                usuarioDao.insert(usuarioMC);
+                JOptionPane.showMessageDialog(null, "Usuário salvo com sucesso!");
+            }
         } catch (SQLException ex) {
             Logger.getLogger(FormCadastroView.class.getName()).log(Level.SEVERE, null, ex);
         }
+    } else {
+        JOptionPane.showMessageDialog(null, "Todos os campos obrigatórios devem estar preenchidos !");
     }
     
-    
+    }
 }
