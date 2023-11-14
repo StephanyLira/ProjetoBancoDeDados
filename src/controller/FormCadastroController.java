@@ -37,12 +37,12 @@ public class FormCadastroController {
         int DDD = Integer.parseInt(view.getjTextFieldCadastrarDDD().getText());
         int celular = Integer.parseInt(view.getjTextFieldCadastarCelular().getText());
         int dia = Integer.parseInt(view.getjComboBoxCadastrarDia().getSelectedItem().toString());
-        String mes = view.getjComboBoxCadastrarDia().getSelectedItem().toString();
-        int ano = Integer.parseInt(view.getjComboBoxCadastrarDia().getSelectedItem().toString());
+        String mes = view.getjComboBoxCadastrarMes().getSelectedItem().toString();
+        int ano = Integer.parseInt(view.getjComboBoxCadastarAno().getSelectedItem().toString());
         String endereco = view.getjTextFieldCadastrarEndereco().getText();
-        int CEP = Integer.parseInt(view.getjComboBoxCadastrarDia().getSelectedItem().toString());
+        int CEP = Integer.parseInt(view.getjTextFieldCadastarCEP().getText());
         String estado = view.getjComboBoxCadastrarEstado().getToolTipText();
-        int numero = Integer.parseInt(view.getjComboBoxCadastrarDia().getSelectedItem().toString());
+        int numero = Integer.parseInt(view.getjTextFieldCadastarNumero().getText());
         
         //Usuario usuarioXandi = new Usuario("xandi", "123456");
        Usuario usuarioMC = new Usuario(email, senha, nome, nomeSocial, DDD, celular, dia, mes, ano, endereco, CEP, estado, numero);

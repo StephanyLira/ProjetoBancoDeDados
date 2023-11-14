@@ -100,7 +100,7 @@ public class LoginView extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(218, 41, 28));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/LoginImagem.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1190, 850));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1190, 850));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
