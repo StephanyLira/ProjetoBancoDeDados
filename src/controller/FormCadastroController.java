@@ -45,11 +45,11 @@ public class FormCadastroController {
         int numero = Integer.parseInt(view.getjComboBoxCadastrarDia().getSelectedItem().toString());
         
         //Usuario usuarioXandi = new Usuario("xandi", "123456");
-       Usuario usuarioStephany = new Usuario(email, senha, nome, nomeSocial, DDD, celular, dia, mes, ano, endereco, CEP, estado, numero);
+       Usuario usuarioMC = new Usuario(email, senha, nome, nomeSocial, DDD, celular, dia, mes, ano, endereco, CEP, estado, numero);
         try {
             Connection conexao = new Conexao().getConnection();
             UsuarioDAO usuarioDao = new UsuarioDAO(conexao);
-            usuarioDao.insert(usuarioStephany);
+            usuarioDao.insert(usuarioMC);
             
             JOptionPane.showMessageDialog(null, "Usuário salvo com sucesso!");
             

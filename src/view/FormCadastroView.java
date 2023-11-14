@@ -77,6 +77,12 @@ public class FormCadastroView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTextFieldCadastrarNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCadastrarNomeActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextFieldCadastrarNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 450, 40));
 
         jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 40)); // NOI18N
@@ -251,6 +257,10 @@ public class FormCadastroView extends javax.swing.JFrame {
     private void jTextFieldCadastrarNomeSocialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCadastrarNomeSocialActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldCadastrarNomeSocialActionPerformed
+
+    private void jTextFieldCadastrarNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCadastrarNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldCadastrarNomeActionPerformed
 
     /**
      * @param args the command line arguments

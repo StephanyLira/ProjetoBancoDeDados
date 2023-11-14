@@ -23,7 +23,7 @@ public class UsuarioDAO {
     
     public Usuario insert(Usuario usuario) throws SQLException{
        
-        String sql = " insert into usuario(email,senha,nome,ddd,celular,dia,mes,ano,endereco,cep,estado,numero,nomesocial) values (?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = " insert into usuario(email,senha,nome,ddd,celular,dia,mes,ano,endereco,cep,estado,numero,nomesocial) values (?, ?, ?, ?,?,?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             
         statement.setString(1, usuario.getEmail());
