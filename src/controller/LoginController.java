@@ -33,7 +33,7 @@ public class LoginController {
         Connection conexao = new Conexao().getConnection();
         UsuarioDAO usuarioDao = new UsuarioDAO(conexao);
         
-        boolean existe = usuarioDao.existeNoBancoPorUsuarioESenha(usuarioAutenticar);
+        boolean existe = usuarioDao.existeNoBancoPorEmailESenha(usuarioAutenticar);
         
         // se existir direcionar para o menu
         if(existe){
@@ -42,8 +42,6 @@ public class LoginController {
         }else{
             JOptionPane.showMessageDialog(view, "Usuário ou senha inválidos");
         }
-        
-        
     }
      
      

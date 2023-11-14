@@ -24,6 +24,10 @@ public class Usuario {
         this.senha = senha;
     }
 
+    public Usuario(String email) {
+        this.email = email;
+    }
+  
     public Usuario(int id, String email, String senha, String nome, String nomeSocial, String DDD, String celular, String dia, String mes, String ano, String endereco, String CEP, String estado, String numero) {
         this.id = id;
         this.email = email;

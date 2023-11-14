@@ -15,10 +15,8 @@ import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-import model.Usuario;
 import view.util.LimitaCaracteres;
 
 /**
@@ -32,7 +30,7 @@ public class FormCadastroView extends javax.swing.JFrame {
         initComponents();
         controller = new FormCadastroController(this);
         jTextFieldCadastrarEmail.setDocument(new LimitaCaracteres(345, LimitaCaracteres.TipoEntrada.EMAIL));
-        jPasswordSenhaCadastrar.setDocument(new LimitaCaracteres(15, LimitaCaracteres.TipoEntrada.EMAIL));
+        jPasswordCadastrarSenha.setDocument(new LimitaCaracteres(15, LimitaCaracteres.TipoEntrada.EMAIL));
         jTextFieldCadastrarNome.setDocument(new LimitaCaracteres(60, LimitaCaracteres.TipoEntrada.NOME));
         jTextFieldCadastrarNomeSocial.setDocument(new LimitaCaracteres(60, LimitaCaracteres.TipoEntrada.NOME));
         jTextFieldCadastrarDDD.setDocument(new LimitaCaracteres(2, LimitaCaracteres.TipoEntrada.NUMEROINTEIRO));
@@ -50,7 +48,7 @@ public class FormCadastroView extends javax.swing.JFrame {
         jTextFieldCadastrarNome = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jTextFieldCadastrarEmail = new javax.swing.JTextField();
-        jPasswordSenhaCadastrar = new javax.swing.JPasswordField();
+        jPasswordCadastrarSenha = new javax.swing.JPasswordField();
         jButtonSalvar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -94,13 +92,13 @@ public class FormCadastroView extends javax.swing.JFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 1210, -1));
         getContentPane().add(jTextFieldCadastrarEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 450, 40));
 
-        jPasswordSenhaCadastrar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPasswordSenhaCadastrar.addActionListener(new java.awt.event.ActionListener() {
+        jPasswordCadastrarSenha.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPasswordCadastrarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordSenhaCadastrarActionPerformed(evt);
+                jPasswordCadastrarSenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(jPasswordSenhaCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 450, 40));
+        getContentPane().add(jPasswordCadastrarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 450, 40));
 
         jButtonSalvar.setBackground(new java.awt.Color(255, 199, 41));
         jButtonSalvar.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -227,11 +225,12 @@ public class FormCadastroView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordSenhaCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordSenhaCadastrarActionPerformed
+    private void jPasswordCadastrarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordCadastrarSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordSenhaCadastrarActionPerformed
+    }//GEN-LAST:event_jPasswordCadastrarSenhaActionPerformed
 
     private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarActionPerformed
+        
         controller.salvaUsuario();
         
     }//GEN-LAST:event_jButtonSalvarActionPerformed
@@ -349,11 +348,11 @@ public class FormCadastroView extends javax.swing.JFrame {
     }
 
     public JPasswordField getjPasswordSenhaCadastrar() {
-        return jPasswordSenhaCadastrar;
+        return jPasswordCadastrarSenha;
     }
 
     public void setjPasswordSenhaCadastrar(JPasswordField jPasswordSenhaCadastrar) {
-        this.jPasswordSenhaCadastrar = jPasswordSenhaCadastrar;
+        this.jPasswordCadastrarSenha = jPasswordSenhaCadastrar;
     }
 
     public JTextField getjTextFieldCadastarCEP() {
@@ -442,7 +441,7 @@ public class FormCadastroView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JPasswordField jPasswordSenhaCadastrar;
+    private javax.swing.JPasswordField jPasswordCadastrarSenha;
     private javax.swing.JTextField jTextFieldCadastarCEP;
     private javax.swing.JTextField jTextFieldCadastarCelular;
     private javax.swing.JTextField jTextFieldCadastarNumero;
