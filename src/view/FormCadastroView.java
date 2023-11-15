@@ -79,27 +79,31 @@ public class FormCadastroView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTextFieldCadastrarNome.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jTextFieldCadastrarNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCadastrarNomeActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldCadastrarNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 450, 40));
+        getContentPane().add(jTextFieldCadastrarNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 450, 40));
 
-        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 40)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 46)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 199, 44));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("CADASTRAR-SE");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 1210, -1));
-        getContentPane().add(jTextFieldCadastrarEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 450, 40));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 1260, -1));
 
+        jTextFieldCadastrarEmail.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        getContentPane().add(jTextFieldCadastrarEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 450, 40));
+
+        jPasswordCadastrarSenha.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jPasswordCadastrarSenha.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPasswordCadastrarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordCadastrarSenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(jPasswordCadastrarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 450, 40));
+        getContentPane().add(jPasswordCadastrarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 450, 40));
 
         jButtonSalvar.setBackground(new java.awt.Color(255, 199, 41));
         jButtonSalvar.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -110,123 +114,137 @@ public class FormCadastroView extends javax.swing.JFrame {
                 jButtonSalvarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 750, 370, 40));
+        getContentPane().add(jButtonSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 730, 370, 50));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 199, 44));
         jLabel2.setText("*Senha:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 90, 30));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 90, 30));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 199, 44));
         jLabel1.setText("*Email:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 80, 30));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 80, 30));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 199, 44));
         jLabel4.setText("*Nome:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 80, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 80, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 199, 44));
         jLabel3.setText("*Número:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 620, 100, 30));
-        getContentPane().add(jTextFieldCadastarCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 220, 240, 40));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 580, 100, 30));
+
+        jTextFieldCadastarCelular.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        getContentPane().add(jTextFieldCadastarCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 200, 250, 40));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 199, 44));
         jLabel6.setText("*Data de Nascimento:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 230, 30));
-        getContentPane().add(jTextFieldCadastrarEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 470, 440, 40));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 230, 30));
+
+        jTextFieldCadastrarEndereco.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        getContentPane().add(jTextFieldCadastrarEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, 440, 40));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 199, 44));
         jLabel7.setText("*DDD:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 70, 30));
-        getContentPane().add(jTextFieldCadastarNumero, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 610, 170, 40));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 70, 30));
+
+        jTextFieldCadastarNumero.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        getContentPane().add(jTextFieldCadastarNumero, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 570, 210, 40));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 199, 44));
         jLabel8.setText("*Endereço:");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, 120, 30));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 120, 30));
 
+        jComboBoxCadastarAno.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jComboBoxCadastarAno.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "<Selecione>", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1950", "1949", "1948", "1947", "1946", "1945", "1944", "1943", "1942", "1941", "1940", "1939", "1938", "1937", "1936", "1935", "1934", "1933", "1932", "1931", "1930", "1929", "1928", "1927", "1926", "1925", "1924", "1923", "1922", "1921", "1920", "1919", "1918", "1917", "1916", "1915", "1914", "1913", "1912", "1911", "1910", "1909", "1908", "1907", "1906", "1905", "1904", "1903", "1902", "1901", "1900" }));
         jComboBoxCadastarAno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxCadastarAnoActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBoxCadastarAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, 100, 40));
+        getContentPane().add(jComboBoxCadastarAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 110, 40));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 199, 44));
-        jLabel9.setText("*Dados Obrigatórios para o cadastro");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 690, 400, 30));
+        jLabel9.setText("Todos os campos com * asteriscos são obrigatórios.");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 650, 480, 30));
 
+        jTextFieldCadastrarNomeSocial.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jTextFieldCadastrarNomeSocial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCadastrarNomeSocialActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldCadastrarNomeSocial, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 150, 420, 40));
+        getContentPane().add(jTextFieldCadastrarNomeSocial, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 130, 430, 40));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 199, 44));
         jLabel10.setText("Nome Social:");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 160, 170, 30));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, 170, 30));
 
+        jTextFieldCadastrarDDD.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jTextFieldCadastrarDDD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCadastrarDDDActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldCadastrarDDD, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 220, 100, 40));
+        getContentPane().add(jTextFieldCadastrarDDD, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 200, 100, 40));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 199, 44));
         jLabel11.setText("*Celular:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 230, 100, 30));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 210, 100, 30));
 
+        jComboBoxCadastrarEstado.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jComboBoxCadastrarEstado.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "<Selecione>", "Acre (AC)", "Alagoas (AL)", "Amapá (AP)", "Amazonas (AM)", "Bahia (BA)", "Ceará (CE)", "Distrito Federal (DF)", "Espírito Santo (ES)", "Goiás (GO)", "Maranhão (MA)", "Mato Grosso (MT)", "Mato Grosso do Sul (MS)", "Minas Gerais (MG)", "Pará (PA)", "Paraíba (PB)", "Paraná (PR)", "Pernambuco (PE)", "Piauí (PI)", "Rio de Janeiro (RJ)", "Rio Grande do Norte (RN)", "Rio Grande do Sul (RS)", "Rondônia (RO)", "Roraima (RR)", "Santa Catarina (SC)", "São Paulo (SP)", "Sergipe (SE)", "Tocantins (TO)" }));
         jComboBoxCadastrarEstado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxCadastrarEstadoActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBoxCadastrarEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 620, 120, 30));
+        getContentPane().add(jComboBoxCadastrarEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 570, 120, 40));
 
+        jComboBoxCadastrarDia.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jComboBoxCadastrarDia.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "<Selecione>", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
         jComboBoxCadastrarDia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxCadastrarDiaActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBoxCadastrarDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, 100, 40));
+        getContentPane().add(jComboBoxCadastrarDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 110, 40));
 
+        jComboBoxCadastrarMes.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jComboBoxCadastrarMes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "<Selecione>", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" }));
         jComboBoxCadastrarMes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxCadastrarMesActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBoxCadastrarMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, 120, 40));
+        getContentPane().add(jComboBoxCadastrarMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 360, 120, 40));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 199, 44));
         jLabel12.setText("*CEP:");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, 80, 30));
-        getContentPane().add(jTextFieldCadastarCEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 540, 440, 40));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 80, 30));
+
+        jTextFieldCadastarCEP.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        getContentPane().add(jTextFieldCadastarCEP, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 500, 440, 40));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 199, 44));
         jLabel13.setText("*Estado:");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 620, 90, 30));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, 90, 30));
 
-        imagemCadastro.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        imagemCadastro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         imagemCadastro.setForeground(new java.awt.Color(255, 199, 44));
         imagemCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/CadastrarImagem.jpg"))); // NOI18N
         imagemCadastro.setText("Amora");
-        getContentPane().add(imagemCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 1250, 850));
+        getContentPane().add(imagemCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 850));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

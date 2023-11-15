@@ -71,7 +71,7 @@ public class LoginView extends javax.swing.JFrame {
                 jToggleButtonLoginEntrarActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButtonLoginEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 570, 261, 30));
+        getContentPane().add(jToggleButtonLoginEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 560, 261, 40));
 
         jToggleButtonLoginCadastrar.setBackground(new java.awt.Color(218, 41, 28));
         jToggleButtonLoginCadastrar.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -82,7 +82,7 @@ public class LoginView extends javax.swing.JFrame {
                 jToggleButtonLoginCadastrarActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButtonLoginCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 620, 261, 30));
+        getContentPane().add(jToggleButtonLoginCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 620, 261, 40));
 
         jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(218, 41, 28));
