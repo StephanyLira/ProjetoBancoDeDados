@@ -15,10 +15,10 @@ import view.CupomDeDescontoView;
  *
  * @author steph
  */
-public class LoginEAdministradorController {
+public class LoginController {
      private LoginView view;
 
-    public LoginEAdministradorController(LoginView view) {
+    public LoginController(LoginView view) {
         this.view = view;
     }
 

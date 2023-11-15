@@ -5,7 +5,7 @@
  */
 package view;
 
-import controller.LoginEAdministradorController;
+import controller.LoginController;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,7 +17,7 @@ import javax.swing.JTextField;
  * @author steph
  */
 public class LoginView extends javax.swing.JFrame {
-    private  final LoginEAdministradorController controller;
+    private  final LoginController controller;
     //private  AdministradorController controller2;
 
     /**
@@ -25,7 +25,7 @@ public class LoginView extends javax.swing.JFrame {
      */
     public LoginView() {
         initComponents();
-        controller = new LoginEAdministradorController(this);
+        controller = new LoginController(this);
         //controller = new AdministradorController(this);
     }
 
