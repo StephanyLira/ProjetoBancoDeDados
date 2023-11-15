@@ -7,21 +7,22 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import model.Usuario;
+import view.AdministradorView;
 import view.LoginView;
-import view.CupomDeDesconto;
+import view.CupomDeDescontoView;
 
 /**
  *
  * @author steph
  */
-public class LoginController {
+public class LoginEAdministradorController {
      private LoginView view;
 
-    public LoginController(LoginView view) {
+    public LoginEAdministradorController(LoginView view) {
         this.view = view;
     }
 
-    public void autenticar() throws SQLException {
+    public void autenticarUsuario() throws SQLException {
         
         //buscar o usuario da view
         String email = view.getjTextFieldLoginEmail().getText();
@@ -37,12 +38,30 @@ public class LoginController {
         
         // se existir direcionar para o menu
         if(existe){
-           CupomDeDesconto telaDeMenu = new CupomDeDesconto();
+           CupomDeDescontoView telaDeMenu = new CupomDeDescontoView();
            telaDeMenu.setVisible(true); 
         }else{
             JOptionPane.showMessageDialog(view, "Usuário ou senha inválidos");
         }
     }
      
-     
+    public void autenticarAdministrador() throws SQLException {
+        
+        //buscar o usuario da view
+        String email = view.getjTextFieldLoginEmail().getText();
+        String senha = view.getjPasswordFieldLoginSenha().getText();
+        
+        Usuario usuarioAutenticar = new Usuario(email, senha);
+        
+       //verificar se é login administrador
+        String emailAdm = "admin123";
+        String senhaAdm = "admin123";
+        if( !senha.equals(senhaAdm) || !email.equals(emailAdm)){
+            JOptionPane.showMessageDialog(view, "Acesso somente o administrador!");
+        }else{
+            
+            AdministradorView telaDeMenu = new AdministradorView();
+            telaDeMenu.setVisible(true);
+        }
+    } 
 }

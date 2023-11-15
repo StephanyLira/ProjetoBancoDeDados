@@ -60,7 +60,7 @@ public class FormCadastroController {
             Logger.getLogger(FormCadastroView.class.getName()).log(Level.SEVERE, null, ex);
         }
     } else {
-        JOptionPane.showMessageDialog(null, "Todos os campos obrigatórios devem estar preenchidos !");
+        JOptionPane.showMessageDialog(null, "Todos os campos com * asteriscos são obrigatórios.");
     }
     
     }

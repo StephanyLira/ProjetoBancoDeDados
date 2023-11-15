@@ -1,4 +1,5 @@
 package model;
+
 /**
  *
  * @author steph
@@ -18,7 +19,9 @@ public class Usuario {
     private String CEP;
     private String estado;
     private String numero;
-
+    
+    
+    
     public Usuario(String email, String senha) {
         this.email = email;
         this.senha = senha;
@@ -60,7 +63,7 @@ public class Usuario {
         this.estado = estado;
         this.numero = numero;
     }
-
+   
     public int getId() {
         return id;
     }
