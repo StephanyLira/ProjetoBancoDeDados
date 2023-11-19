@@ -1,9 +1,5 @@
 package model;
 
-/**
- *
- * @author steph
- */
 public class Usuario {
     private int id;
     private String email;
@@ -19,8 +15,6 @@ public class Usuario {
     private String CEP;
     private String estado;
     private String numero;
-    
-    
     
     public Usuario(String email, String senha) {
         this.email = email;
@@ -63,7 +57,22 @@ public class Usuario {
         this.estado = estado;
         this.numero = numero;
     }
-   
+
+    public Usuario(String senha, String nome, String nomeSocial, String DDD, String celular, String dia, String mes, String ano, String endereco, String CEP, String estado, String numero) {
+        this.senha = senha;
+        this.nome = nome;
+        this.nomeSocial = nomeSocial;
+        this.DDD = DDD;
+        this.celular = celular;
+        this.dia = dia;
+        this.mes = mes;
+        this.ano = ano;
+        this.endereco = endereco;
+        this.CEP = CEP;
+        this.estado = estado;
+        this.numero = numero;
+    }
+
     public int getId() {
         return id;
     }

@@ -18,8 +18,8 @@ public class LimitaCaracteres extends PlainDocument{
         NUMEROINTEIRO, NOME, EMAIL;
     };
     
-    private int qtdCaracteres;
-    private TipoEntrada tpEntrada;
+    private final int qtdCaracteres;
+    private final TipoEntrada tpEntrada;
 
     public LimitaCaracteres(int qtCaracteres, TipoEntrada tpEntrada) {
         this.qtdCaracteres = qtCaracteres;

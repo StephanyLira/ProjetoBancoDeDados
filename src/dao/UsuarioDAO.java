@@ -1,4 +1,3 @@
-
 package dao;
 
 import java.sql.Connection;
@@ -8,24 +7,21 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import model.Usuario;
+import view.AdministradorView;
 
-/**
- *
- * @author steph
- */
 public class UsuarioDAO {
-    
     private final Connection connection;
+    private AdministradorView view;
 
     public UsuarioDAO(Connection connection) {
         this.connection = connection;
     }
-    
+   
     public Usuario insert(Usuario usuario) throws SQLException{
-       
-        String sql = " insert into usuario(email,senha,nome,ddd,celular,dia,mes,ano,endereco,cep,estado,numero,nomesocial) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            
+        String sql = " insert into usuario(email,senha,nome,ddd,celular,"
+                   + "dia,mes,ano,endereco,cep,estado,numero,nomesocial) "
+                   + "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);         
         statement.setString(1, usuario.getEmail());
         statement.setString(2, usuario.getSenha());
         statement.setString(3, usuario.getNome());
@@ -42,7 +38,6 @@ public class UsuarioDAO {
         statement.execute();
         
         ResultSet resultSet = statement.getGeneratedKeys();
-        
         if(resultSet.next()){
             int id = resultSet.getInt("id");
             usuario.setId(id);
@@ -51,9 +46,10 @@ public class UsuarioDAO {
     }
     
     public void update(Usuario usuario) throws SQLException{
-        String sql = "update usuario set email = ?,senha = ?,nome = ?,ddd = ?,celular = ?,dia = ?,mes = ?,ano = ?,endereco = ?,cep = ?,estado = ?,numero = ?,nomesocial = ? where id = ? ";
-        PreparedStatement statement = connection.prepareStatement(sql);
-            
+        String sql = "update usuario set email = ?,senha = ?,nome = ?,ddd = ?,celular = ?,"
+                   + "dia = ?,mes = ?,ano = ?,endereco = ?,cep = ?,estado = ?,numero = ?,"
+                   + "nomesocial = ? where id = ? ";
+        PreparedStatement statement = connection.prepareStatement(sql);   
         statement.setString(1, usuario.getEmail());
         statement.setString(2, usuario.getSenha());
         statement.setString(3, usuario.getNome());
@@ -81,10 +77,31 @@ public class UsuarioDAO {
     
     public void delete(Usuario usuario) throws SQLException{
         String sql = "delete from usuario where id = ? ";
-        PreparedStatement statement = connection.prepareStatement(sql);
+        PreparedStatement statement = connection.prepareStatement(sql); 
         
         statement.setInt(1, usuario.getId());
         statement.execute();
+        }
+    
+    public void deletePorEmailESenha(Usuario usuario) throws SQLException{
+        String sql = "delete from usuario where email = ? and senha = ?";
+        PreparedStatement statement = connection.prepareStatement(sql); 
+        
+        statement.setString(1, usuario.getEmail());
+        statement.setString(2, usuario.getSenha());
+        statement.execute();
+        }
+
+    public void buscaAdminstrador(Usuario usuario) throws SQLException{
+        String sql = "select from usuario where email = ? and senha = ? like";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        
+        statement.setString(1, usuario.getEmail());
+        statement.setString(2, usuario.getSenha());
+        
+        
+        ResultSet comparacao = statement.executeQuery();
+        comparacao.close();
     }
     
     public ArrayList<Usuario> selectAll() throws SQLException{
@@ -93,7 +110,14 @@ public class UsuarioDAO {
         
         return pesquisa(statement);
     }
-
+    
+    public ArrayList<Usuario> selectEmail() throws SQLException{
+        String sql = "select * from usuario where email = ?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        
+        return pesquisa(statement);
+    }
+   
     private ArrayList<Usuario> pesquisa(PreparedStatement statement) throws SQLException {
         ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
         
@@ -132,6 +156,15 @@ public class UsuarioDAO {
         
     }
     
+    public Usuario selectPorEmailESenha(Usuario usuario) throws SQLException{
+        String sql = "select * from usuario where email = ? and senha = ?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setInt(1, usuario.getId());
+        
+        return pesquisa(statement).get(0);
+        
+    }
+    
     public boolean existeNoBancoPorEmailESenha(Usuario usuario) throws SQLException {
         
         String sql = "select * from usuario where email = ? and senha = ? ";
@@ -158,4 +191,19 @@ public class UsuarioDAO {
         ResultSet resultSet = statement.getResultSet();
         return resultSet.next();
     }
+    
+    public boolean exibirNoAdministradorPoremail(Usuario usuario) throws SQLException {
+        
+        String sql = "select * from usuario where email = ?";
+        
+        PreparedStatement statement = connection.prepareStatement(sql);
+        
+        statement.setString(1, usuario.getEmail());
+        statement.execute();
+        
+        ResultSet resultSet = statement.getResultSet();
+        return resultSet.next();
+    }
+    
+    
 }

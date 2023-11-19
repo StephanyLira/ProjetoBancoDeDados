@@ -28,6 +28,7 @@ public class FormCadastroView extends javax.swing.JFrame {
 
     public FormCadastroView() {
         initComponents();
+        
         controller = new FormCadastroController(this);
         jTextFieldCadastrarEmail.setDocument(new LimitaCaracteres(345, LimitaCaracteres.TipoEntrada.EMAIL));
         jPasswordCadastrarSenha.setDocument(new LimitaCaracteres(15, LimitaCaracteres.TipoEntrada.EMAIL));
